@@ -18,6 +18,8 @@
 		2DCD954D1E0B4F2C00145EB5 /* rn_githubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* rn_githubTests.m */; };
 		62176E33152F2A7FC18B98E9 /* libPods-rn_github-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C246F40DFB2B6D8DEDF92D87 /* libPods-rn_github-tvOS.a */; };
 		76654A1EC3A542CA8B50D17F /* libPods-rn_github-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8269626D3E79841A31823E53 /* libPods-rn_github-tvOSTests.a */; };
+		93CE613B2438BED5009B5079 /* ios in Resources */ = {isa = PBXBuildFile; fileRef = 93CE613A2438BED5009B5079 /* ios */; };
+		93CE613D2438BF51009B5079 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 93CE613C2438BF51009B5079 /* Fonts */; };
 		D9599D185E0420F1F0CAC842 /* libPods-rn_github-rn_githubTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 957CEC8933AE1EE7746AE764 /* libPods-rn_github-rn_githubTests.a */; };
 		E8F3C4420DE1B87D767D3BDA /* libPods-rn_github.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D590AF14AEECAEF5E3E83EF /* libPods-rn_github.a */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,8 @@
 		5D590AF14AEECAEF5E3E83EF /* libPods-rn_github.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rn_github.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAF4260CF346F50EF695216 /* Pods-rn_github-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_github-tvOS.release.xcconfig"; path = "Target Support Files/Pods-rn_github-tvOS/Pods-rn_github-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		8269626D3E79841A31823E53 /* libPods-rn_github-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rn_github-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93CE613A2438BED5009B5079 /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ios; sourceTree = "<group>"; };
+		93CE613C2438BF51009B5079 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
 		957CEC8933AE1EE7746AE764 /* libPods-rn_github-rn_githubTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rn_github-rn_githubTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B715C25BC2009B51073B63F4 /* Pods-rn_github.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_github.release.xcconfig"; path = "Target Support Files/Pods-rn_github/Pods-rn_github.release.xcconfig"; sourceTree = "<group>"; };
 		C246F40DFB2B6D8DEDF92D87 /* libPods-rn_github-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rn_github-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +129,8 @@
 		13B07FAE1A68108700A75B9A /* rn_github */ = {
 			isa = PBXGroup;
 			children = (
+				93CE613C2438BF51009B5079 /* Fonts */,
+				93CE613A2438BED5009B5079 /* ios */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -343,8 +349,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CE613B2438BED5009B5079 /* ios in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				93CE613D2438BF51009B5079 /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

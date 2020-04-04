@@ -11,15 +11,15 @@ export default class HomePage extends React.Component {
       <View sytle={{flex: 1, backgroundColor: 'gray', paddingTop: 30}}>
         <Text style={styles.text}>HomePage</Text>
         <Button
-          title={'Go Page1'}
+          title={'MaterialTopTabNavigator'}
           onPress={() => {
-            navigation.navigate('Page1');
+            navigation.navigate('MaterialTopTabNavigator');
           }}
         />
         <Button
-          title={'go Page2'}
+          title={'BottomTabNavigator'}
           onPress={() => {
-            navigation.navigate('Page2');
+            navigation.navigate('BottomTabNavigator');
           }}
         />
         <Button

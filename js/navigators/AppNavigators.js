@@ -1,7 +1,10 @@
 import React from 'react';
 import {Button, Text} from 'react-native';
 import {createStackNavigator} from 'react-navigation-stack';
-import {createBottomTabNavigator} from 'react-navigation-tabs';
+import {
+  createBottomTabNavigator,
+  createMaterialTopTabNavigator,
+} from 'react-navigation-tabs';
 import HomePage from '../pages/HomePage';
 import Page1 from '../pages/Page1';
 import Page2 from '../pages/Page2';
@@ -42,13 +45,84 @@ const BottomTabNavigator = createBottomTabNavigator(
     },
   },
 );
-
+const MaterialTopTabNavigator = createMaterialTopTabNavigator(
+  {
+    Page1: {
+      screen: Page1,
+      navigationOptions: {
+        tabBarLabel: 'Page1',
+        tabBarIcon: ({tintColor, focused}) => (
+          <Ionicons name={'ios-home'} size={26} style={{color: tintColor}} />
+        ),
+      },
+    },
+    Page2: {
+      screen: Page2,
+      navigationOptions: {
+        tabBarLabel: 'Page2',
+        tabBarIcon: ({tintColor, focused}) => (
+          <Ionicons
+            name={'ios-people'}
+            size={26}
+            style={{color: focused ? 'orange' : 'blue'}}
+          />
+        ),
+      },
+    },
+    Page3: {
+      screen: Page3,
+      navigationOptions: {
+        tabBarLabel: 'Page3',
+        tabBarIcon: ({tintColor, focused}) => (
+          <Ionicons
+            name={'ios-people'}
+            size={26}
+            style={{color: focused ? 'orange' : 'blue'}}
+          />
+        ),
+      },
+    },
+  },
+  {
+    tabBarOptions: {
+      // activeTintColor: 'red',
+      tabStyle: {
+        minWidth: 50,
+        // backgroundColor: '#FFFF00',
+      },
+      upperCaseLabel: false,
+      style: {
+        backgroundColor: '#FF6700',
+      },
+      indicatorStyle: {
+        height: 2,
+        backgroundColor: '#00FF00',
+      },
+      labelStyle: {
+        fontSize: 40,
+        color: '#0000FF',
+      },
+    },
+  },
+);
 export const AppStackNavigator = createStackNavigator(
   {
     HomePage: {
+      screen: HomePage, //HomePage
+      navigationOptions: {
+        title: '主页',
+      },
+    },
+    BottomTabNavigator: {
       screen: BottomTabNavigator, //HomePage
       navigationOptions: {
-        title: '底部导航',
+        title: '底部导航器',
+      },
+    },
+    MaterialTopTabNavigator: {
+      screen: MaterialTopTabNavigator, //HomePage
+      navigationOptions: {
+        title: '顶部导航器',
       },
     },
     Page1: {

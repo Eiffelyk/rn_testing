@@ -1,28 +1,16 @@
 import React from 'react';
 import {Button, View, Text, StyleSheet} from 'react-native';
 
-export default class Page1 extends React.Component {
+export default class Login extends React.Component {
   render() {
     const {navigation} = this.props;
     return (
       <View sytle={{flex: 1, backgroundColor: 'gray', paddingTop: 30}}>
-        <Text style={styles.text}>welcome page one</Text>
+        <Text style={styles.text}>welcome Login Page</Text>
         <Button
-          title={'Go Back'}
+          title={'go Main'}
           onPress={() => {
-            navigation.goBack();
-          }}
-        />
-        <Button
-          title={'go Page2'}
-          onPress={() => {
-            navigation.navigate('Page2');
-          }}
-        />
-        <Button
-          title={'go Page3'}
-          onPress={() => {
-            navigation.navigate('Page3');
+            navigation.navigate('App');
           }}
         />
       </View>
