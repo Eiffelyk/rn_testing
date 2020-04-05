@@ -1,17 +1,62 @@
 import React from 'react';
-import {Button, Text} from 'react-native';
+import {Button, Text, ScrollView} from 'react-native';
 import {createStackNavigator} from 'react-navigation-stack';
 import {
   createBottomTabNavigator,
   createMaterialTopTabNavigator,
 } from 'react-navigation-tabs';
+import {SafeAreaView} from 'react-navigation';
 import HomePage from '../pages/HomePage';
 import Page1 from '../pages/Page1';
 import Page2 from '../pages/Page2';
 import Page3 from '../pages/Page3';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-
+import {
+  createDrawerNavigator,
+  DrawerNavigatorItems,
+} from 'react-navigation-drawer';
+import Page4 from '../pages/Page4';
+import Page5 from '../pages/Page5';
+import SwitchNavigator from './SwitchNavigator';
+const DrawerNavigator = createDrawerNavigator(
+  {
+    Page4: {
+      screen: Page4,
+      navigationOptions: {
+        drawerLabel: 'Page4',
+        drawerIcon: ({tintColor, focused}) => (
+          <MaterialIcons name={'drafts'} size={24} style={{color: tintColor}} />
+        ),
+      },
+    },
+    Page5: {
+      screen: Page5,
+      navigationOptions: {
+        drawerLabel: 'page5',
+        drawerIcon: ({tintColor, focused}) => (
+          <MaterialIcons
+            name={'move-to-inbox'}
+            size={24}
+            style={{color: tintColor}}
+          />
+        ),
+      },
+    },
+  },
+  {
+    contentComponent: props => (
+      <ScrollView style={{backgroundColor: '#00f', flex: 1}}>
+        <SafeAreaView forceInset={{top: 'always'}}>
+          <DrawerNavigatorItems {...props} />
+        </SafeAreaView>
+      </ScrollView>
+    ),
+    contentOptions: {
+      activeTintColor: 'white',
+    },
+  },
+);
 const BottomTabNavigator = createBottomTabNavigator(
   {
     Page1: {
@@ -113,6 +158,8 @@ export const AppStackNavigator = createStackNavigator(
         title: '主页',
       },
     },
+    SwitchNavigator: SwitchNavigator,
+    DrawerNavigator: DrawerNavigator,
     BottomTabNavigator: {
       screen: BottomTabNavigator, //HomePage
       navigationOptions: {
